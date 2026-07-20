@@ -1,0 +1,23 @@
+// Lista de curiosidades sobre a Terra
+const curiosidades = [
+    "A Terra não é uma esfera perfeita; ela é um esferoide oblato, ligeiramente achatada nos polos e abaulada no equador.",
+    "A fossa das Marianas é o lugar mais profundo dos oceanos, chegando a quase 11 km de profundidade.",
+    "A Terra é o único planeta conhecido do Sistema Solar que possui água em seus três estados: líquido, sólido e gasoso.",
+    "A atmosfera da Terra é composta por aproximadamente 78% de nitrogênio, 21% de oxigênio e 1% de outros gases.",
+    "A temperatura mais alta já registrada na superfície da Terra foi de 56,7 °C no Vale da Morte, nos EUA, em 1913.",
+    "O núcleo da Terra é tão quente quanto a superfície do Sol, atingindo temperaturas de cerca de 5.500 °C.",
+    "A gravidade não é igual em todos os lugares do planeta. Por causa do formato achatado e da densidade, você pesa um pouco menos no equador do que nos polos!"
+];
+
+// Selecionando os elementos HTML
+const botao = document.getElementById("fact-btn");
+const textoFato = document.getElementById("fact-text");
+
+// Função para mostrar um fato aleatório
+botao.addEventListener("click", function() {
+    // Sorteia um índice da lista
+    const indiceAleatorio = Math.floor(Math.random() * curiosidades.length);
+    
+    // Altera o texto na tela
+    textoFato.innerText = curiosidades[indiceAleatorio];
+});
